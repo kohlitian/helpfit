@@ -1,0 +1,525 @@
+/* smooth effect all over website */
+*{
+  transition: all 0.4s ease;
+}
+
+/* customized bootstrap container */
+.container-style{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.navbar-nav li a{
+  border-top: 5px transparent solid;
+  padding-top: 25px;
+}
+
+nav .active a{
+	background-color: transparent !important;
+	padding-top: 25px !important;
+	border-top: 5px solid #b38600;
+}
+
+/* header background color */
+header{
+  background-color: #dedede;
+}
+
+.navbar-style{
+	padding-bottom: 15px;
+	margin-bottom: 0px;
+	letter-spacing: 1px;
+	font-size: 15px;
+	background: linear-gradient(to bottom, rgba(206,206,206,1) 0%,rgba(242,242,242,1) 50%,rgba(242,242,242,0.95) 80%,rgba(242,242,242,0.9) 100%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* bootstrap mobile menu button */
+.tabMobile{
+	height: 45px;
+  margin-bottom: 10px;
+}
+
+.navbar-nav li a:hover{
+  border-top: 5px solid #fff;
+  text-decoration: none;
+  margin-top: 0;
+}
+
+/* logo container */
+.logo{
+	height: 80px;
+	padding-bottom: 25px;
+	padding-right: 30px;
+	margin-top: -2px;
+}
+
+.btn-group{
+	margin-right:20px;
+}
+
+.btn-group button ul li a{
+	background-color: #F0F2F0;
+}
+
+.marginTB{
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+
+.carousel-inner .item .img{
+	width: 100%;
+	height: 400px;
+	background-position: center center;
+	background-size: cover;
+}
+
+.container-fluid{
+	height: 100px;
+}
+
+/* Default color and font */
+body {
+	font: 17px Montserrat,Arial, sans-serif;
+	line-height: 1.8;
+	color: #000000;
+	background-color: #F9FAF9;
+	}
+
+.clear{
+	clear: both;
+}
+
+.navbar-collapse.collapse.in{
+	padding-top: 0px;
+}
+
+nav button:last-child{
+	margin-right: 30px;
+	margin-top: 25px;
+
+}
+
+nav li button a {
+	color: #000000;
+}
+
+.btn-trans{
+	background-color: transparent;
+	border: 1px solid grey;
+	color: black;
+}
+
+.btn-trans:hover{
+	background-color: transparent;
+	border: 1px solid black;
+	color: gray;
+}
+
+div #navToggle{
+	padding-left: 15px;
+}
+
+/* footer */
+footer{
+	background-color: #dedede;
+	padding-bottom: 20px;
+	box-shadow: 0px -5px 10px rgba(0,0,0,0.4);
+}
+
+footer p{
+	font-size: 13px;
+}
+
+.btn-footer a{
+	color: #000000;
+}
+
+.btn-footer a:hover{
+	text-decoration: none;
+}
+
+
+.formButton{
+	margin-top:23px;
+}
+
+/* rounded frame with box shadow */
+.formStyle{
+	border: 2px solid #aaa;
+	border-radius: 9px;
+	padding: 30px;
+	background-color: #f3f3f3;
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.2);
+}
+
+.formStyle:hover{
+box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+}
+
+.formStyle p{
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.formStyle span{
+	color: #9FA09F;
+	font-size: 13px;
+}
+
+.form-control:hover{
+box-shadow: 0px 0px 5px rgba(255,255,0,0.9);
+
+}
+
+.noCenter{
+	text-align: left !important;
+	margin-top: 0px;
+}
+
+.welcomeIcon{
+height: 100px;
+}
+
+.noSpaceTop{
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+}
+
+.form-group{
+	margin-bottom: 2px;
+}
+
+.input-group{
+	margin-top: 10px;
+}
+
+.trainerIcon{
+height: 30px;
+margin-top: 15px;
+padding-right: 0px;
+}
+
+.starIcon{
+width: 100px;
+margin-top: 30px;
+padding-left: 0px;
+}
+
+table tr td div p {
+padding-left: 0px !important;
+}
+
+/* fine tunning for responsive views */
+@media (min-width: 768px) and (max-width:1024px) {
+.navbar-style{
+	letter-spacing: 1px;
+}
+.collapse .navbar-right button{
+	margin-right: 5px;
+	margin-left:0px;
+}
+.navbar-style  .collapse .nav li a{
+	padding-left: 5px;
+	padding-right: 10px;
+}
+.navbar-brand .logo{
+	padding-right: 5px;
+}
+.navbar-brand .logo {
+	height: 70px ;
+	margin-top: 2px;
+}
+}
+
+
+.navbar-right{
+list-style-type: none;
+margin-top: 25px;
+padding:0px;
+position: relative;
+} 
+
+.navbar-right li{
+float: left;
+margin-right: 10px;
+
+}
+
+nav{
+z-index: 1;
+}
+
+/* fixed position header on scroll */
+.stickTheHeader nav{
+position: fixed;
+top: 0px;
+left: 0px;
+right: 0px;
+z-index: 1;
+}
+
+
+@media (min-width: 768px) and (max-width:920px) {
+	.navbar-style{
+		padding-bottom: 15px;
+		margin-bottom: 0px;
+
+	}
+}
+
+@media (max-width:768px) {
+	.formStyle p{
+		letter-spacing: -1px;
+		font-size: 15px;
+	}
+	.btn-footer{
+		padding: 8px;
+		margin: 0px;
+		letter-spacing: -1px;
+		margin-top: 5px !important;
+	}
+
+	.navbar-right li{
+		float: left;
+		}
+	.navbar-right li button{
+		margin-right: 0px;
+		margin-left: 10px;
+
+	}
+
+    .logo{
+      margin-top: 13px;
+      height:60px;
+    }
+
+    .navbar-nav ul,.navbar-nav{
+      margin-top:0px;
+      margin-bottom:0px;
+      padding-top:0px;
+      padding-bottom:0px;
+    }
+    .navbar-nav li a{
+      padding: 20px;
+      border-top: 5px transparent solid;
+      border-bottom:5px transparent solid;
+    }
+
+
+
+    .navbar-nav .active{
+      background-color: rgba(255,255,255,0.4);
+    }
+    .navbar-nav li:hover{
+      background-color: rgba(255,255,255,0.9);
+    }
+
+    .navbar-right li:hover{
+      background-color: transparent;
+    }
+
+    .navbar-right a{
+      margin-bottom:10px;
+    }
+
+}
+
+.bigtext{
+  font-size: 30pt !important;
+}
+
+.regtypebtn.btn-sm .smartlinebreaker{
+  display: inline !important;
+}
+
+.verybigtext{
+  font-size: 50pt !important;
+}
+
+.center{
+  text-align: center;
+}
+
+.hidden-always{
+  display: none;
+}
+
+.noround{
+  border-radius: 0px;
+}
+
+.transWord{
+	color: #E1E2E1;
+}
+
+.lefty{
+	float: left;
+}
+.righty{
+	float: right;
+}
+
+.marginright10{
+	margin-right: 10px;
+}
+.marginleft10{
+	margin-left: 10px;
+}
+
+.gallery{
+	background: #fff;
+	display: inline;
+	margin: 24px;
+	padding: 10px 10px 15px;
+	box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	transform: rotate(4deg);
+}
+
+.gallery:hover{
+	transform: rotate(-2deg);
+}
+
+.marginTBL{
+	margin-top: 6px !important;
+}
+.marginTBL .row div button{
+	width: 100%;
+}
+.marginTBL.border .row{
+	border-top: 1px solid #ccc;
+}
+@media (max-width:768px) {
+	.marginTBL.border .row{
+		border: 2px solid #aaa;
+		padding: 10px 0px;
+		margin: 10px 0px;
+		border-radius: 9px;
+		background-color: #f3f3f3;
+		box-shadow: 0px 0px 50px rgba(0,0,0,0.2);
+	}
+
+	.marginTBL.border .row:hover{
+		box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+	}
+}
+
+
+.tabletraining{
+	font-size: 10pt;
+}
+
+.tabletraining .idcol{
+	color: gray;
+	display: inline-block;
+	width: 7px;
+}
+
+
+/* rating star */
+.ratingstar.glyphicon-star{
+	color: #FEBE00;
+}
+.ratingstar{
+	color: #ccc;
+	letter-spacing: -2px;
+	font-size: 8pt;
+	text-shadow: 0px 0px 1px #000;
+}
+
+.ratingstarcontainer{
+	display: inline-block;
+}
+
+.tabletraining .glyphicon-user{
+	margin-top: 6px;
+	font-size: 17pt;
+	margin-right: 7px;
+	color: gray;
+}
+
+.tabletraining .trainer{
+	line-height: 13pt;
+}
+
+.tabletraining .btn{
+	font-size: 8pt;
+	padding:3px;
+}
+
+.fullwidth{
+	width: 100%;
+}
+
+/* fix glitch on slider due to smooth effect, removing for slider */
+.slider,.slider *{
+	  transition: none;
+}
+.slider *{
+	z-index: 0;
+}
+
+.btn-user{
+	background-color: #284061;
+	color: #fff;
+}
+
+/* dropdown menu on hover for logged in members */
+.navbar-right ul{
+	position: fixed;
+	z-index:2;
+	right: 10px;
+	list-style-type: none;
+	display: block;
+	padding:0px;
+	margin:0px;
+	background: rgba(255,255,255,0.8);
+	border: 1px solid #ddd;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+	opacity:0;
+}
+.navbar-right li:hover ul{
+	list-style-type: none;
+	display: block;
+	height: 100px;
+	opacity:1;
+	width: 220px;
+
+}
+.navbar-right ul li{
+	float:left;
+	width: 100%;
+}
+.navbar-right ul li:hover{
+	background-color: #284061;
+	color: #fff;
+}
+.navbar-right ul li:hover a{
+	color: #fff;
+	text-decoration: none;
+}
+.navbar-right ul li a{
+	padding: 5px 15px;
+	display: block;
+	margin-bottom: 0px !important;
+	color: #888;
+	font-size: 10pt;
+	letter-spacing: -1px;
+	font-weight: normal;
+}
+
+
+@media (max-width:768px) {
+	.navbar-right ul{
+		left: 0px;
+		right: 0px;
+		width: 100%;
+	}
+}
