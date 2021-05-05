@@ -80,7 +80,7 @@ else {
 
 		//if there is no error, insert training session into database
 		if($nameError =="" && $feeError =="" && $dateError =="" && $classError =="" && $trainingError ==""){
-			$newSession = "INSERT INTO `TrainingSessions` (`sessionID`, `title`, `datetime`, `fee`, `status`, `note`, `trainingType`, `classType`, `maxParticipants`, `trainerID`) VALUES ('', '".addslashes($name)."', '$time', '$fee', 'Available', '', '$classType', '$trainingType', '$participant' , '".$user['trainerID']."') ";
+			$newSession = "INSERT INTO `TrainingSessions` (`title`, `datetime`, `fee`, `status`, `note`, `trainingType`, `classType`, `maxParticipants`, `trainerID`) VALUES ('".addslashes($name)."', '$time', '$fee', 'Available', '', '$classType', '$trainingType', '$participant' , '".$user['trainerID']."') ";
 			if(mysqli_query($connect, $newSession)){
 				$_SESSION['passThruMessage']="Your new session has been added successfully.";
 				header('Location: myTraining.php'); exit;

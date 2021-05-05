@@ -208,7 +208,7 @@ if(isset($user) && $user['type'] == "member"){
 			<div class="row">
 				<div class="col-xs-6 col-sm-2 marginTBL">
 					<span class="lefty marginright10 hidden-xs idcol"><?php if(isset($theSession)){ echo $theSession['sessionID']; } ?></span><span>
-						<?php if(isset($_GET['sessionID'])){ echo mysqli_fetch_array(mysqli_query($connect,"select count(*) from joinedsessions where sessionid='".$_GET['sessionID']."';"))[0];} ?>/<?php if(isset($theSession)) {echo $theSession['maxParticipants'];} ?>
+						<?php if(isset($_GET['sessionID'])){ echo mysqli_fetch_array(mysqli_query($connect,"select count(*) from JoinedSessions where sessionid='".$_GET['sessionID']."';"))[0];} ?>/<?php if(isset($theSession)) {echo $theSession['maxParticipants'];} ?>
 					</span>
 				</div>
 				<div class="col-xs-6 col-sm-4">

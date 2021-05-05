@@ -114,7 +114,7 @@ if(!isset($user['fullName'])){
 					$trainer = mysqli_fetch_assoc(mysqli_query($connect, "SELECT * FROM `Trainers` WHERE `trainerID` = '".$row['trainerID']."'"));
 					
 					//get rating of session
-					$rating = mysqli_query($connect, "SELECT rating FROM `Review`,`TrainingSessions` where review.sessionID=TrainingSessions.sessionID and TrainingSessions.trainerID='".$row['trainerID']."';");
+					$rating = mysqli_query($connect, "SELECT rating FROM `Review`,`TrainingSessions` where Review.sessionID=TrainingSessions.sessionID and TrainingSessions.trainerID='".$row['trainerID']."';");
 					$totalR = 0;
 					$avgR = 0;
 					//calculate rating of session

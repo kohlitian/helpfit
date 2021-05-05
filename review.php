@@ -39,7 +39,7 @@ else {
 
 	//if no error, insert comment and rating into database
 	if($rateError == "" && $commentError == ""){
-		mysqli_query($connect, "INSERT INTO `Review` (`reviewID`, `timeStamp`, `rating`, `comment`, `memberID`, `sessionID`) VALUES ('', '".time()."', '$rate', '$comment', '".$user['memberID']."','".$_GET['sessionID']."');");
+		mysqli_query($connect, "INSERT INTO `Review` (`timeStamp`, `rating`, `comment`, `memberID`, `sessionID`) VALUES ('".time()."', '$rate', '$comment', '".$user['memberID']."','".$_GET['sessionID']."');");
 		$_SESSION['passThruMessage']="Your review has been added successfully.";
 		header("Location: myTraining.php"); exit;
 	}
@@ -100,7 +100,7 @@ else {
 			<div class="row">
 				<div class="col-xs-6 col-sm-2 marginTBL">
 					<span class="lefty marginright10 hidden-xs idcol"><?php if(isset($information)){ echo $information['sessionID']; } ?></span><span>
-						<?php if(isset($_GET['sessionID'])){ echo mysqli_fetch_array(mysqli_query($connect,"select count(*) from joinedsessions where sessionid='".$_GET['sessionID']."';"))[0];} ?>/<?php if(isset($information)) {echo $information['maxParticipants'];} ?>
+						<?php if(isset($_GET['sessionID'])){ echo mysqli_fetch_array(mysqli_query($connect,"select count(*) from JoinedSessions where sessionid='".$_GET['sessionID']."';"))[0];} ?>/<?php if(isset($information)) {echo $information['maxParticipants'];} ?>
 					</span>
 				</div>
 				<div class="col-xs-6 col-sm-4">
@@ -108,7 +108,7 @@ else {
 					if(isset($information)){
 						 $trainer = mysqli_fetch_assoc(mysqli_query($connect, "SELECT * FROM `Trainers` WHERE `trainerID` = '".$information['trainerID']."'"));
 					
-					$rating = mysqli_query($connect, "SELECT rating FROM `Review`,`TrainingSessions` where review.sessionID=TrainingSessions.sessionID and TrainingSessions.trainerID='".$information['trainerID']."';");
+					$rating = mysqli_query($connect, "SELECT rating FROM `Review`,`TrainingSessions` where Review.sessionID=TrainingSessions.sessionID and TrainingSessions.trainerID='".$information['trainerID']."';");
 					$totalR = 0;
 					$avgR = 0;
 						if(mysqli_num_rows($rating) > 0){
@@ -163,7 +163,7 @@ else {
 		</div>
 		<?php } else { 
 
-			$get_review=mysqli_fetch_array(mysqli_query($connect,"select comment from review where `sessionid`='".$_GET['sessionID']."' and memberID='".$user['memberID']."' limit 1;"));
+			$get_review=mysqli_fetch_array(mysqli_query($connect,"select comment from Review where `sessionID`='".$_GET['sessionID']."' and memberID='".$user['memberID']."' limit 1;"));
 			if ($get_review['comment']!=''||$get_review['rate']>0){
 			?> <br><br> <div class="well"> You have reviewed this session <button class="btn btn-default" onclick="alert('<?php echo addslashes(str_replace("\n", ". ",str_replace("\r", " ", $get_review['comment']))); ?>');">Read</button></div> <?php }} ?>
 		<div class="container marginTBL" style="margin-bottom:30px;">

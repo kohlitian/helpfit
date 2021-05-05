@@ -15,7 +15,7 @@ if(!isset($_SESSION['id'])){
 	if(isset($session['datetime']) && isset($user)){
 		$check = mysqli_query($connect, "SELECT `memberID` FROM `JoinedSessions` WHERE `memberID` = '".$user['memberID']."' AND `sessionID` = '".$session['sessionID']."'");
 		if($session['status'] == 'Available' && $session['datetime'] > time() && $user['type'] == "member" && mysqli_num_rows($check) == 0){
-				mysqli_query($connect, "INSERT INTO `JoinedSessions` (`joinID`, `memberID`, `sessionID`) VALUES ('$ID', '".$user['memberID']."', '".$session['sessionID']."')");
+				mysqli_query($connect, "INSERT INTO `JoinedSessions` (`memberID`, `sessionID`) VALUES ('".$user['memberID']."', '".$session['sessionID']."')");
 				
 		}
 	}

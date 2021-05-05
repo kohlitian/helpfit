@@ -97,9 +97,9 @@ $no_error=1;
 		if($emailError == "" && $usernameError == "" && $passwordError == "" && $conPassError == "" && $nameError == "" && $levelError == "" && $specialityError == "" && $selectError == ""){
 			//insert data into database if no errors
 			if($_POST['userType']=='member'){
-				$signUp = "INSERT INTO `Member` (`memberID`, `email`, `username`, `password`, `fullName`, `level`, `signupDate`, `loginDate`) VALUES ('$ID', '".addslashes($email)."','".addslashes($username)."', '".addslashes($password)."', '".addslashes($fname)."', '".addslashes($level)."', '$signupDate', '$loginDate')";
+				$signUp = "INSERT INTO `Member` (`email`, `username`, `password`, `fullName`, `level`, `signupDate`, `loginDate`) VALUES ('".addslashes($email)."','".addslashes($username)."', '".addslashes($password)."', '".addslashes($fname)."', '".addslashes($level)."', '$signupDate', '$loginDate')";
 			} else {
-				$signUp = "INSERT INTO `Trainers` (`trainerID`, `email`, `username`, `password`, `fullName`, `specialty`, `signupDate`, `loginDate`) VALUES ('$ID', '".addslashes($email)."', '".addslashes($username)."', '".addslashes($password)."', '".addslashes($fname)."', '".addslashes($speciality)."', '$signupDate', '$loginDate')";
+				$signUp = "INSERT INTO `Trainers` (`email`, `username`, `password`, `fullName`, `specialty`, `signupDate`, `loginDate`) VALUES ('".addslashes($email)."', '".addslashes($username)."', '".addslashes($password)."', '".addslashes($fname)."', '".addslashes($speciality)."', '$signupDate', '$loginDate')";
 			}
 			if(mysqli_query($connect, $signUp)){
 				//notify user about successfull signup

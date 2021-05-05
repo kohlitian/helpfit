@@ -11,7 +11,7 @@
 			<div class="collapse navbar-collapse" id="navToggle">
 				<ul class="nav navbar-nav">
 						<li <?php if (isset($is_home)){ ?>class="active"<?php } ?>><a href="Home.php">Home</a></li>
-						<li <?php if (isset($is_training)){ ?>class="active"<?php } ?>><a href="Training.php">Jobs</a></li>
+						<li <?php if (isset($is_training)){ ?>class="active"<?php } ?>><a href="Training.php">Sessions</a></li>
 						<li <?php if (isset($is_contact)){ ?>class="active"<?php } ?>><a href="contact.php">Contract Us</a></li>
 				</ul>
 				<ul class="navbar-right">
