@@ -72,6 +72,9 @@ else {
 			} else{
 				$participant = $_POST['participant'];
 			}
+		} else {
+			$trainingType = '';
+			$participant = 1;
 		}
 
 

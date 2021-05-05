@@ -105,7 +105,7 @@ $no_error=1;
 			if(mysqli_query($connect, $signUp)){
 				//notify user about successfull signup
 				$_SESSION['passThruMessage']="Your account has been created successfully. You can login now.";
-				header('Location: logIn.php'); exit;
+				header('Location: LogIn.php'); exit;
 			}
 		}else{
 			$no_error=0;

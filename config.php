@@ -1,6 +1,6 @@
 <?php
 
-//config access to localhost
+// //config access to localhost
 // $servername = "localhost";
 // $username = "root";
 // $password = "";
