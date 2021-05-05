@@ -9,7 +9,6 @@ if(isset($_SESSION['id']) && $_SESSION['id'] > 0){
 	$_SESSION['passThruMessage'] = "You have to log out first then only can sign up";
 	header("Location: welcome.php"); exit;
 }
-
 $no_error=1;
 
 	//if form is posted
