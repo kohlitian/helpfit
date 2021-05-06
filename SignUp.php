@@ -268,5 +268,8 @@ if ($no_error==0){
 </script>
 <?php }} ?>
 
+<script type="text/javascript">btnregmember();
+<script type="text/javascript">btnregtrainer();
+
 </body>
 </html>
