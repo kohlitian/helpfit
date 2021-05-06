@@ -28,9 +28,11 @@ if (isset($need_rating)){ ?>
 <script type="text/javascript" src = "js/star-rating.min.js"></script>
 <?php } 
 //if helpfit.js is allowed, included it
+echo $no_helpfit_js;
 if (!isset($no_helpfit_js)) { ?>
 <script type="text/javascript" src = "js/helpfit.js"></script>
-<?php } ?>
+
+<?php echo $no_helpfit_js; } ?>
 
 <?php 
 
